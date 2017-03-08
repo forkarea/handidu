@@ -24,37 +24,84 @@
             color: #888;
             margin-bottom: 5px;
         }
+        
+        .footer {
+            padding: 10px 0px;
+            background-color: #ddd;
+        }
+        
+        .handidu-navbar {
+            background-color: #B10DC9;
+            color: #eee;
+            border-radius: 0px;
+        }
+        
+        .handidu-navbar a {
+            color: #f5f5f5;
+        }
+        
+        .handidu-navbar .navbar-nav > li > a:hover,
+        .handidu-navbar .navbar-nav > li > a:focus {
+            background-color: #9E12B3;
+        }
         </style>
     </head>
     <body>
-        <div class="container">
-            <nav class="navbar navbar-default" style="margin-top: 15px">
-                <div class="container-fluid">
-                    <!-- Brand and toggle get grouped for better mobile display -->
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                            <span class="sr-only">Toggle navigation</span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button>
-                        <a class="navbar-brand" href="#">Handidu</a>
-                    </div>
+        <nav class="navbar handidu-navbar">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">Handidu</a>
+                </div>
 
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
                         <li><a href="#">Link</a></li>
                     </ul>
-                    
+
                     <p class="navbar-text navbar-right">Signed in as <a href="#">Piotrek</a></li>
-                    
+
                 </div><!-- /.navbar-collapse -->
-              </div><!-- /.container-fluid -->
-            </nav>
+            </div><!-- /.container-fluid -->
+        </nav>
+        
+        <div class="container">
             
             <div class="row">
                 <div class="col-sm-9 col-xs-12">
+                    
+                    <div class="row">
+                        <div class="col-md-3 col-xs-6">
+                            <a href="#" class="thumbnail">
+                                <img src="http://placehold.it/200x200">
+                            </a>
+                        </div>
+
+                        <div class="col-md-3 col-xs-6">
+                            <a href="#" class="thumbnail">
+                                <img src="http://placehold.it/200x200">
+                            </a>
+                        </div>
+
+                        <div class="col-md-3 col-xs-6">
+                            <a href="#" class="thumbnail">
+                                <img src="http://placehold.it/200x200">
+                            </a>
+                        </div>
+
+                        <div class="col-md-3 col-xs-6">
+                            <a href="#" class="thumbnail">
+                                <img src="http://placehold.it/200x200">
+                            </a>
+                        </div>
+                    </div>
                     
                     <div class="row">
                         <div class="col-md-3 col-xs-6">
@@ -127,6 +174,13 @@
                         </div>
                     </div>
                 </div>
+            </div>
+            
+        </div>
+        
+        <div class="footer">
+            <div class="container">
+                <a href="http://blog.piatkiewicz.com">Blog</a> | <a href="https://twitter.com/piotrevic">Twitter</a> | <a href="https://github.com/piatkiewicz/handidu">GitHub</a>
             </div>
         </div>
     </body>
