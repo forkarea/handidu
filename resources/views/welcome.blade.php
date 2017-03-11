@@ -77,57 +77,24 @@
             <div class="row">
                 <div class="col-sm-9 col-xs-12">
                     
-                    <div class="row">
-                        <div class="col-md-3 col-xs-6">
-                            <a href="#" class="thumbnail">
-                                <img src="http://placehold.it/200x200">
-                            </a>
-                        </div>
-
-                        <div class="col-md-3 col-xs-6">
-                            <a href="#" class="thumbnail">
-                                <img src="http://placehold.it/200x200">
-                            </a>
-                        </div>
-
-                        <div class="col-md-3 col-xs-6">
-                            <a href="#" class="thumbnail">
-                                <img src="http://placehold.it/200x200">
-                            </a>
-                        </div>
-
-                        <div class="col-md-3 col-xs-6">
-                            <a href="#" class="thumbnail">
-                                <img src="http://placehold.it/200x200">
-                            </a>
-                        </div>
-                    </div>
+                    @for($i = 0; $i < 2; $i++)
                     
                     <div class="row">
+                        
+                        @for($j = 0; $j < 4; $j++)
+                    
                         <div class="col-md-3 col-xs-6">
                             <a href="#" class="thumbnail">
-                                <img src="http://placehold.it/200x200">
+                                <img src="http://lorempixel.com/200/200/">
                             </a>
                         </div>
-
-                        <div class="col-md-3 col-xs-6">
-                            <a href="#" class="thumbnail">
-                                <img src="http://placehold.it/200x200">
-                            </a>
-                        </div>
-
-                        <div class="col-md-3 col-xs-6">
-                            <a href="#" class="thumbnail">
-                                <img src="http://placehold.it/200x200">
-                            </a>
-                        </div>
-
-                        <div class="col-md-3 col-xs-6">
-                            <a href="#" class="thumbnail">
-                                <img src="http://placehold.it/200x200">
-                            </a>
-                        </div>
+                        
+                        @endfor
+                        
                     </div>
+
+                    @endfor
+                    
                     
                     <div class="row">
                         <div class="col-xs-12 posts">
@@ -163,6 +130,7 @@
                         <a href="#" class="list-group-item">Biżuteria</a>
                         <a href="#" class="list-group-item">Ubrania</a>
                         <a href="#" class="list-group-item">Ozdoby do domu</a>
+                        <a href="#" class="list-group-item">Obrazy</a>
                     </div>
                     
                     <div class="thumbnail">
