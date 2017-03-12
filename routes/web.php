@@ -12,7 +12,12 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    $things = App\Thing::all();
+    $categories = App\Category::all();
+    return view('welcome', [
+        'things' => $things,
+        'categories' => $categories
+    ]);
 });
 
 Route::get('/gallery/{slug}', function () {

@@ -82,10 +82,13 @@
                     <div class="row">
                         
                         @for($j = 0; $j < 4; $j++)
-                    
+                        @if(!isset($things[($i+1)*$j]))
+                                @continue;
+                            $thing = $things[($i+1)*$j];  
+                        @endif
                         <div class="col-md-3 col-xs-6">
                             <a href="#" class="thumbnail">
-                                <img src="http://lorempixel.com/200/200/">
+                                <img title="{{ $thing->created_at }}" src="{{ $thing->image_url }}">
                             </a>
                         </div>
                         
@@ -125,12 +128,9 @@
                 
                 <div class="col-sm-3 col-xs-12">
                     <div class="list-group">
-                        <a href="#" class="list-group-item">Pluszaki</a>
-                        <a href="#" class="list-group-item">Rzeźby</a>
-                        <a href="#" class="list-group-item">Biżuteria</a>
-                        <a href="#" class="list-group-item">Ubrania</a>
-                        <a href="#" class="list-group-item">Ozdoby do domu</a>
-                        <a href="#" class="list-group-item">Obrazy</a>
+                        @foreach($categories as $category)
+                            <a href="#" class="list-group-item">{{ $category->name }}</a>
+                        @endforeach
                     </div>
                     
                     <div class="thumbnail">
