@@ -77,26 +77,23 @@
             <div class="row">
                 <div class="col-sm-9 col-xs-12">
                     
-                    @for($i = 0; $i < 2; $i++)
+                    @foreach($things->chunk(4) as $chunk)
                     
                     <div class="row">
                         
-                        @for($j = 0; $j < 4; $j++)
-                        @if(!isset($things[($i+1)*$j]))
-                                @continue;
-                            $thing = $things[($i+1)*$j];  
-                        @endif
+                        @foreach($chunk as $thing)
+                        
                         <div class="col-md-3 col-xs-6">
                             <a href="#" class="thumbnail">
                                 <img title="{{ $thing->created_at }}" src="{{ $thing->image_url }}">
                             </a>
                         </div>
                         
-                        @endfor
+                        @endforeach
                         
                     </div>
 
-                    @endfor
+                    @endforeach
                     
                     
                     <div class="row">
