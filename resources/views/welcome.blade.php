@@ -81,7 +81,7 @@
                     
                     <div class="row">
                         
-                        @foreach($chunk as $thing)
+                        @foreach($chunk as $thing) 
                         
                         <div class="col-md-3 col-xs-6">
                             <a href="#" class="thumbnail">
