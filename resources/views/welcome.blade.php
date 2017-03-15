@@ -66,8 +66,12 @@
                         <li><a href="#">Link</a></li>
                     </ul>
 
-                    <p class="navbar-text navbar-right">Signed in as <a href="#">Piotrek</a></li>
-
+                    @if(Auth::check())
+                    <p class="navbar-text navbar-right">Signed in as <a href="#">Piotrek</a></p>
+                    @else
+                    <p class="navbar-text navbar-right"><a href="#">Zaloguj</a></p>
+                    @endif
+                        
                 </div><!-- /.navbar-collapse -->
             </div><!-- /.container-fluid -->
         </nav>
