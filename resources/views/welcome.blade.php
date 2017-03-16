@@ -69,7 +69,8 @@
                     @if(Auth::check())
                     <p class="navbar-text navbar-right">Signed in as <a href="#">Piotrek</a></p>
                     @else
-                    <p class="navbar-text navbar-right"><a href="#">Zaloguj</a></p>
+                    <!-- Do zmiany. Trzeba pewnie użyć jakiejś funkcji -->
+                    <p class="navbar-text navbar-right"><a href="/login">Zaloguj</a></p>
                     @endif
                         
                 </div><!-- /.navbar-collapse -->
