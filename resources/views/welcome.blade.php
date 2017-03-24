@@ -9,6 +9,11 @@
         <title>Handidu - portal społecznościowy dla rękodzielników</title>
 
         <style>
+        @import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);
+        
+        body {
+            font-family: "Raleway";
+        }
         //tu trzeba dorobić jakąś klasę na elemencie nadrzędnym
         .thumbnail img {
             width: 100%;
@@ -31,7 +36,7 @@
         }
         
         .handidu-navbar {
-            background-color: #B10DC9;
+            background-color: #66c6ba;
             color: #eee;
             border-radius: 0px;
         }
@@ -42,7 +47,7 @@
         
         .handidu-navbar .navbar-nav > li > a:hover,
         .handidu-navbar .navbar-nav > li > a:focus {
-            background-color: #9E12B3;
+            background-color: #5BB5AA;
         }
         </style>
     </head>
@@ -65,14 +70,15 @@
                     <ul class="nav navbar-nav">
                         <li><a href="#">Link</a></li>
                     </ul>
-
+                    
                     @if(Auth::check())
-                    <p class="navbar-text navbar-right">Signed in as <a href="#">Piotrek</a></p>
+                    <p class="navbar-text navbar-right">Signed in as <a href="#">{{ Auth::user()->name }}</a></p>
                     @else
-                    <!-- Do zmiany. Trzeba pewnie użyć jakiejś funkcji -->
-                    <p class="navbar-text navbar-right"><a href="/login">Zaloguj</a></p>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="/login">Zaloguj</a></li>
+                    </ul>
                     @endif
-                        
+
                 </div><!-- /.navbar-collapse -->
             </div><!-- /.container-fluid -->
         </nav>
@@ -140,7 +146,6 @@
                         <div class="caption">
                             <h3>Thumbnail label</h3>
                             <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                            <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
                         </div>
                     </div>
                 </div>
