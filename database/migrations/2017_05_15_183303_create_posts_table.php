@@ -16,7 +16,7 @@ class CreatePostsTable extends Migration
         Schema::create('posts', function (Blueprint $table) {
             $table->increments('id');
             $table->text('text');
-            $table->foreign('author_id')->references('id')->on('users');
+            $table->integer('author_id');
             $table->timestamp('created_at');
         });
     }
