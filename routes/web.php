@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    $things = App\Thing::all();
+    $things = App\Thing::all()->take(8);
     $categories = App\Category::all();
     return view('welcome', [
         'things' => $things,
