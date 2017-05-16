@@ -30,7 +30,7 @@ Route::get('/gallery/{slug}', function () {
 Route::get('/category/{slug}', function ($slug) {
     $category = Category::where('slug',$slug)->first();
     dd($category->name);
-});
+})->name('category');
 
 Auth::routes();
 
