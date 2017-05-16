@@ -114,7 +114,7 @@
                             
                             <div class="post">
                                 <div class="post-meta-data">
-                                    Dodano {{ $post->created_at }} przez <a href="#">Piotrek</a>
+                                    Dodano {{ $post->created_at }} przez <a href="#">{{ $post->author->name }}</a>
                                 </div>
                                 
                                 <div class="post-content">
