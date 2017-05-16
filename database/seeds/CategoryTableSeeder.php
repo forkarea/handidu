@@ -12,6 +12,11 @@ class CategoryTableSeeder extends Seeder
      */
     public function run()
     {
-        Category::create(['name' => 'Pluszaki']);
+        Category::create(['name' => 'Wystrój domu']);
+        Category::create(['name' => 'Okazjonalne']);
+        Category::create(['name' => 'Ubrania']);
+        Category::create(['name' => 'Biżuteria']);
+        Category::create(['name' => 'Zabawki']);
+        Category::create(['name' => 'Gadżety']);
     }
 }
