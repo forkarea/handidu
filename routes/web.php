@@ -13,13 +13,16 @@
 
 use App\Thing;
 use App\Category;
+use App\Post;
 
 Route::get('/', function () {
     $things = Thing::all()->take(8);
     $categories = Category::all();
+    $posts = Post::all()->take(3);
     return view('welcome', [
         'things' => $things,
-        'categories' => $categories
+        'categories' => $categories,
+        'posts' => $posts
     ]);
 });
 

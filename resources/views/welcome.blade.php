@@ -109,25 +109,21 @@
                     
                     <div class="row">
                         <div class="col-xs-12 posts">
-                            <div class="post">
-                                <div class="post-meta-data">
-                                    Dodano 05.03.17 21:41 przez <a href="#">Piotrek</a>
-                                </div>
-                                
-                                <div class="post-content">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur
-                                </div>
-                            </div>
+                            
+                            @foreach($posts as $post)
                             
                             <div class="post">
                                 <div class="post-meta-data">
-                                    Dodano 05.03.17 21:41 przez <a href="#">Piotrek</a>
+                                    Dodano {{ $post->created_at }} przez <a href="#">Piotrek</a>
                                 </div>
                                 
                                 <div class="post-content">
-                                    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit
+                                    {{ $post->text }}
                                 </div>
-                            </div>
+                            </div>  
+                            
+                            @endforeach
+                            
                         </div>
                     </div>
                     
