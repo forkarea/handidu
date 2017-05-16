@@ -36,5 +36,3 @@ Route::get('/category/{slug}', function ($slug) {
 })->name('category');
 
 Auth::routes();
-
-Route::get('/home', 'HomeController@index');
