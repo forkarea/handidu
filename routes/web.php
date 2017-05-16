@@ -11,9 +11,12 @@
 |
 */
 
+use App\Thing;
+use App\Category;
+
 Route::get('/', function () {
-    $things = App\Thing::all()->take(8);
-    $categories = App\Category::all();
+    $things = Thing::all()->take(8);
+    $categories = Category::all();
     return view('welcome', [
         'things' => $things,
         'categories' => $categories
@@ -22,6 +25,11 @@ Route::get('/', function () {
 
 Route::get('/gallery/{slug}', function () {
     return view('welcome');
+});
+
+Route::get('/category/{slug}', function ($slug) {
+    $category = Category::where('slug',$slug)->first();
+    dd($category->name);
 });
 
 Auth::routes();
