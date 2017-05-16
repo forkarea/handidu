@@ -72,7 +72,18 @@
                     </ul>
                     
                     @if(Auth::check())
-                    <p class="navbar-text navbar-right">Signed in as <a href="#">{{ Auth::user()->name }}</a></p>
+                    <p class="navbar-text navbar-right">
+                        Signed in as <a href="#">{{ Auth::user()->name }}</a> | 
+                        <a href="{{ route('logout') }}"
+                            onclick="event.preventDefault();
+                                     document.getElementById('logout-form').submit();">
+                            Logout
+                        </a>
+
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                            {{ csrf_field() }}
+                        </form>
+                    </p>
                     @else
                     <ul class="nav navbar-nav navbar-right">
                         <li><a href="/login">Zaloguj</a></li>
