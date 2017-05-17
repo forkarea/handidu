@@ -26,9 +26,9 @@ Route::get('/', function () {
     ]);
 });
 
-Route::get('/gallery/{slug}', function () {
-    return view('welcome');
-});
+Route::get('/gallery/{user}/{slug}', function ($slug) {
+    dd($slug);
+})->name('thing');
 
 Route::get('/category/{slug}', function ($slug) {
     $category = Category::where('slug',$slug)->first();
