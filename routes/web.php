@@ -26,7 +26,7 @@ Route::get('/', function () {
     ]);
 });
 
-Route::get('/gallery/{user}/{slug}', function ($slug) {
+Route::get('/gallery/{user}/{slug}', function ($user, $slug) {
     dd($slug);
 })->name('thing');
 
