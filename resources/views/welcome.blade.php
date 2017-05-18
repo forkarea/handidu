@@ -107,7 +107,7 @@
                         
                         <div class="col-md-3 col-xs-6">
                             <a href="{{ route('thing',['user' => $thing->author->username, 'slug' => $thing->slug]) }}" class="thumbnail">
-                                <img title="{{ $thing->created_at }}" src="{{ $thing->image_url }}">
+                                <img src="{{ $thing->image_url }}">
                             </a>
                         </div>
                         
