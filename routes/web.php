@@ -14,6 +14,7 @@
 use App\Thing;
 use App\Category;
 use App\Post;
+use App\User;
 
 Route::get('/', function () {
     $things = Thing::all()->take(8);
@@ -38,5 +39,10 @@ Route::get('/category/{slug}', function ($slug) {
 Route::get('/posts', function () {
     dd(Post::all());
 })->name('posts');
+
+Route::get('/profile/{username}', function ($username) {
+    $user = User::where(['username' => $username])->first();
+    dd($user);
+})->name('user');
 
 Auth::routes();
