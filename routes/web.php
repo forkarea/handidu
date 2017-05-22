@@ -45,4 +45,8 @@ Route::get('/profile/{username}', function ($username) {
     dd($user);
 })->name('user');
 
+Route::get('/add-thing', function () {
+    dd('Tu będzie formularz dodawania swojego dzieła');
+})->name('add-thing')->middleware('auth');
+
 Auth::routes();
