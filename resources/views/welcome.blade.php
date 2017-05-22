@@ -73,7 +73,7 @@
                     
                     @if(Auth::check())
                     <p class="navbar-text navbar-right">
-                        Signed in as <a href="#">{{ Auth::user()->fullname }}</a> | 
+                        Signed in as <a href="{{ route('user', Auth::user()->username) }}">{{ Auth::user()->fullname }}</a> | 
                         <a href="{{ route('logout') }}"
                             onclick="event.preventDefault();
                                      document.getElementById('logout-form').submit();">
