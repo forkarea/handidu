@@ -35,4 +35,8 @@ Route::get('/category/{slug}', function ($slug) {
     dd($category->things);
 })->name('category');
 
+Route::get('/posts', function () {
+    dd(Post::all());
+})->name('posts');
+
 Auth::routes();
