@@ -8,7 +8,7 @@
         @foreach($chunk as $thing) 
 
         <div class="col-md-3 col-xs-6">
-            <a href="{{ route('thing',['user' => $thing->author->username, 'slug' => $thing->slug]) }}" class="thumbnail">
+            <a href="{{ $thing->link }}" class="thumbnail">
                 <img src="{{ $thing->image_url }}">
             </a>
         </div>

@@ -13,4 +13,8 @@ class Thing extends Model
     public function author() {
         return $this->hasOne('App\User', 'id', 'author_id');
     }
+    
+    public function getLinkAttribute() {
+        return route('thing', ['user' => $this->author->username, 'slug' => $this->slug]);
+    }
 }
