@@ -18,17 +18,16 @@ use App\User;
 
 Route::get('/', function () {
     $things = Thing::all()->take(8);
-    $categories = Category::all();
     $posts = Post::all()->take(3);
     return view('index', [
         'things' => $things,
-        'categories' => $categories,
         'posts' => $posts
     ]);
 });
 
 Route::get('/gallery/{user}/{slug}', function ($user, $slug) {
-    dd($slug);
+    $thing = Thing::where('slug',$slug)->first();
+    return view('thing', ['thing' => $thing]);
 })->name('thing');
 
 Route::get('/category/{slug}', function ($slug) {
