@@ -36,7 +36,8 @@ Route::get('/category/{slug}', function ($slug) {
 })->name('category');
 
 Route::get('/posts', function () {
-    dd(Post::all());
+    $posts = Post::all();
+    return view('posts', ['posts' => $posts]);
 })->name('posts');
 
 Route::get('/profile/{username}', function ($username) {
@@ -45,7 +46,7 @@ Route::get('/profile/{username}', function ($username) {
 })->name('user');
 
 Route::get('/add-thing', function () {
-    dd('Tu będzie formularz dodawania swojego dzieła');
+    return view('add_thing');
 })->name('add-thing')->middleware('auth');
 
 Auth::routes();
