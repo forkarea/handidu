@@ -69,6 +69,7 @@
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
                         <li><a href="{{ route('add-thing') }}">Dodaj dzieło</a></li>
+                        <li><a href="{{ route('posts') }}">Posty</a></li>
                     </ul>
                     
                     @if(Auth::check())
