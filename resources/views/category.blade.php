@@ -1,6 +1,10 @@
 @extends('layouts.main')
 
 @section('content')
-<pre>{{ $category }}</pre>
-<pre>{{ $category->things }}</pre>
+    <h2>{{ $category->name }}</h2>
+    <ul>
+        @foreach($category->things as $thing)
+            <li><a href="{{ route('thing',['user' => $thing->author->username, 'slug' => $thing->slug]) }}">{{ $thing->slug }}</a></li>
+        @endforeach
+    </ul>
 @endsection
