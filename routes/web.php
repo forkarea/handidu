@@ -41,7 +41,7 @@ Route::get('/posts', function () {
 
 Route::get('/profile/{username}', function ($username) {
     $user = User::where(['username' => $username])->first();
-    dd($user);
+    return view('profile', ['user' => $user]);
 })->name('user');
 
 Route::get('/add-thing', function () {
