@@ -1,5 +1,5 @@
 @extends('layouts.main')
 
 @section('content')
-{{ $thing }}
+<pre>{{ $thing }}</pre>
 @endsection

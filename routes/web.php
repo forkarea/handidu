@@ -32,7 +32,7 @@ Route::get('/gallery/{user}/{slug}', function ($user, $slug) {
 
 Route::get('/category/{slug}', function ($slug) {
     $category = Category::where('slug',$slug)->first();
-    dd($category->things);
+    return view('category', ['category' => $category]);
 })->name('category');
 
 Route::get('/posts', function () {
