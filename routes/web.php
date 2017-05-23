@@ -20,7 +20,7 @@ Route::get('/', function () {
     $things = Thing::all()->take(8);
     $categories = Category::all();
     $posts = Post::all()->take(3);
-    return view('welcome', [
+    return view('index', [
         'things' => $things,
         'categories' => $categories,
         'posts' => $posts
