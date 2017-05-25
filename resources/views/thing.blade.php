@@ -11,6 +11,8 @@
     ({{ $thing->created_at }})
 </p>
 
+<p style="margin: 20px 0px">{{ $thing->description }}</p>
+
 <div style="margin: 20px 0px">
     <img src="{{ $thing->image_url }}" class="img-thumbnail">
 </div>
