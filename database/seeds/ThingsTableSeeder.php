@@ -15,6 +15,7 @@ class ThingsTableSeeder extends Seeder
         for($i=1; $i<=10;$i++) {
             Thing::create([
                 'name' => 'Rzecz',
+                'description' => 'lorem ipsum',
                 'slug' => 'rzecz-'.$i,
                 'image_url' => 'http://lorempixel.com/200/200/',
                 'author_id' => 1
