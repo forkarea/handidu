@@ -12,9 +12,10 @@ class ThingsTableSeeder extends Seeder
      */
     public function run()
     {
-        for($i=0; $i<10;$i++) {
+        for($i=1; $i<=10;$i++) {
             Thing::create([
-                'slug' => 'rzecz'.$i,
+                'name' => 'Rzecz',
+                'slug' => 'rzecz-'.$i,
                 'image_url' => 'http://lorempixel.com/200/200/',
                 'author_id' => 1
             ]);
