@@ -50,7 +50,7 @@
             background-color: #5BB5AA;
         }
         
-        .user-label:hover {
+        .user-label:hover, .user-label:active, .user-label:focus {
             text-decoration: none;
         }
         </style>
