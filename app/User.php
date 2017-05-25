@@ -30,4 +30,13 @@ class User extends Authenticatable
     public function getFullnameAttribute() {
         return $this->first_name.' '.$this->last_name;
     }
+    
+    public function getAvatarAttribute() {
+        return 'http://i.pravatar.cc/35?img=68'; //tu ma być rzeczywista ścieżka do pliku
+    }
+    
+    public function getLinkAttribute() {
+        return route('user', ['username' => $this->username]);
+    }
+    
 }

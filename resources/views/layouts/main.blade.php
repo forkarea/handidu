@@ -49,6 +49,10 @@
         .handidu-navbar .navbar-nav > li > a:focus {
             background-color: #5BB5AA;
         }
+        
+        .user-label:hover {
+            text-decoration: none;
+        }
         </style>
     </head>
     <body>
