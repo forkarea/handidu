@@ -1,5 +1,7 @@
 @extends('layouts.main')
 
 @section('content')
-<pre>{{ $posts }}</pre>
+    @foreach($posts as $post) 
+        @include('partials.post')
+    @endforeach
 @endsection
