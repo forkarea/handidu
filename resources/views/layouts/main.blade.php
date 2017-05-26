@@ -10,7 +10,7 @@
 
         <style>
         @import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);
-        
+
         body {
             font-family: "Raleway";
         }
@@ -20,8 +20,9 @@
         }    
         
         .post {
-            padding: 15px 0px 30px 0px;
+            padding: 15px 0px 5px 0px;
             border-top: 1px solid #ddd;
+            margin: 15px 0px;
         }
         
         .post-meta-data {
