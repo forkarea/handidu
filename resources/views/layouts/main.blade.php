@@ -133,7 +133,7 @@
         
         <div class="footer">
             <div class="container">
-                <a href="http://blog.piatkiewicz.com">Blog</a> | <a href="https://twitter.com/piotrevic">Twitter</a> | <a href="https://github.com/piatkiewicz/handidu">GitHub</a>
+                <a href="http://piatkiewicz.com">Piotrek</a> | <a href="https://twitter.com/piotrevic">Twitter</a> | <a href="https://github.com/piatkiewicz/handidu">GitHub</a>
             </div>
         </div>
     </body>
