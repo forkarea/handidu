@@ -19,8 +19,18 @@
 
     <h3>Komentarze</h3>
 
-    @foreach($thing->comments as $comment)
-        {{ $comment->text }} - {{ $comment->author->fullname }}
-    @endforeach
+    <div style="margin: 20px 0px">
+        @foreach($thing->comments as $comment)
+            <div class="comment" style="margin: 10px 0px">
+                <div style="display: inline-block; margin-right: 4px">
+                    <a href="{{ $comment->author->link }}"><img class="img-circle" src="{{ $comment->author->avatar }}"></a>
+                </div>
+                <p style="display: inline-block">
+                    <a href="{{ $comment->author->link }}">{{ $comment->author->fullname }}</a>: 
+                    {{ $comment->text }} <span style="color: #aaa"> - {{ $comment->created_at }}</span>
+                </p>
+            </div>
+        @endforeach
+    </div>
 
 @endsection
