@@ -11,4 +11,9 @@ class Post extends Model
     public function author() {
         return $this->hasOne('App\User', 'id', 'author_id');
     }
+    
+    public function comments()
+    {
+        return $this->morphMany('App\Comment', 'commentable');
+    }
 }
