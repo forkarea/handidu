@@ -18,7 +18,7 @@ use App\User;
 
 Route::get('/', function () {
     $things = Thing::all()->take(8);
-    $posts = Post::all()->take(3);
+    $posts = Post::all()->sortByDesc('created_at')->take(3);
     return view('index', [
         'things' => $things,
         'posts' => $posts
