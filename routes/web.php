@@ -36,9 +36,11 @@ Route::get('/category/{slug}', function ($slug) {
 })->name('category');
 
 Route::get('/posts', function () {
-    $posts = Post::all();
+    $posts = Post::all()->sortByDesc('created_at')->take(100);
     return view('posts', ['posts' => $posts]);
 })->name('posts');
+
+Route::post('/posts', 'PostController@store')->middleware('auth');
 
 Route::get('/profile/{username}', function ($username) {
     $user = User::where(['username' => $username])->first();
