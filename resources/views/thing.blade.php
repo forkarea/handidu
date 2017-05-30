@@ -31,6 +31,18 @@
                 </p>
             </div>
         @endforeach
+        
+        @if (Auth::check())
+        <form method="POST" action="{{ route('post_comment') }}">
+            {{ csrf_field() }}
+            <input type="hidden" name="thing_id" value="{{ $thing->id }}">
+            <input type="hidden" name="for" value="thing">
+            <div class="form-group">
+                <textarea class="form-control" name="text" rows="3"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Dodaj komentarz</button>
+        </form>
+    @endif
     </div>
 
 @endsection

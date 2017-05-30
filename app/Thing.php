@@ -30,4 +30,8 @@ class Thing extends Model
     public function getMainphotoAttribute() {
         return $this->photos->first();
     }
+    
+    public function getRouteAttribute() {
+        return route('thing',['user' => $this->author->username, 'slug' => $this->slug]);
+    }
 }
