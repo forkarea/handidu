@@ -26,4 +26,8 @@ class Thing extends Model
     public function photos() {
         return $this->morphMany('App\Photo', 'photoholdable');
     }
+    
+    public function getMainphotoAttribute() {
+        return $this->photos->first();
+    }
 }

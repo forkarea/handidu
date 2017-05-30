@@ -14,7 +14,7 @@
     <p style="margin: 20px 0px">{{ $thing->description }}</p>
 
     <div style="margin: 20px 0px">
-        <img src="{{ $thing->image_url }}" class="img-thumbnail">
+        <img src="{{ $thing->mainphoto->filename }}" class="img-thumbnail">
     </div>
 
     <h3>Komentarze</h3>

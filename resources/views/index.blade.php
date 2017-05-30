@@ -9,7 +9,7 @@
 
         <div class="col-md-3 col-xs-6">
             <a href="{{ $thing->link }}" class="thumbnail">
-                <img src="{{ $thing->image_url }}">
+                <img src="{{ $thing->mainphoto->filename }}">
             </a>
         </div>
 
