@@ -17,6 +17,15 @@
         <img src="{{ $thing->mainphoto->filename }}" class="img-thumbnail">
     </div>
 
+    <p>Kategorie:
+        @foreach($thing->categories as $category)
+        <a href="{{ route('category', $category->slug) }}">{{ $category->name }}</a>
+            @if(!$loop->last)
+            , 
+            @endif
+        @endforeach
+    </p>
+    
     <h3>Komentarze</h3>
 
     <div style="margin: 20px 0px">
