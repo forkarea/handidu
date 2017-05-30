@@ -42,7 +42,9 @@
             </div>
             <button type="submit" class="btn btn-primary">Dodaj komentarz</button>
         </form>
-    @endif
+        @else
+        <p><a href="{{ route('login') }}">Zaloguj się</a>, aby dodać komentarz</p>
+        @endif
     </div>
 
 @endsection
