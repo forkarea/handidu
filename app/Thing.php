@@ -31,7 +31,4 @@ class Thing extends Model
         return $this->photos->first();
     }
     
-    public function getRouteAttribute() {
-        return route('thing',['user' => $this->author->username, 'slug' => $this->slug]);
-    }
 }

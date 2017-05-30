@@ -17,6 +17,6 @@ class CommentController extends Controller
             $comment->commentable_type = Thing::class;
         $comment->commentable_id = $request->thing_id;
         $comment->save();
-        return redirect(Thing::where(['id' => $request->thing_id])->first()->route);
+        return redirect(Thing::where(['id' => $request->thing_id])->first()->link);
     }
 }
