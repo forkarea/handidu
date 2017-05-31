@@ -22,7 +22,7 @@
                     @foreach($chunk as $photo) 
 
                     <div class="col-md-3 col-xs-6">
-                        <a href="#" class="thumbnail">
+                        <a href="{{ $photo->filename }}" class="thumbnail" data-toggle="lightbox" data-gallery="thing">
                             <img src="{{ $photo->filename }}">
                         </a>
                     </div>
