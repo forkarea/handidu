@@ -13,9 +13,26 @@
 
     <p style="margin: 20px 0px">{{ $thing->description }}</p>
 
-    @if($thing->mainphoto)
+    @if($thing->photos)
         <div style="margin: 20px 0px">
-            <img src="{{ $thing->mainphoto->filename }}" class="img-thumbnail">
+            @foreach($thing->photos->chunk(4) as $chunk)
+
+                <div class="row">
+
+                    @foreach($chunk as $photo) 
+
+                    <div class="col-md-3 col-xs-6">
+                        <a href="#" class="thumbnail">
+                            <img src="{{ $photo->filename }}">
+                        </a>
+                    </div>
+
+                    @endforeach
+
+                </div>
+
+            @endforeach
+            
         </div>
     @endif
 
