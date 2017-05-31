@@ -17,7 +17,6 @@ class ThingsTableSeeder extends Seeder
                 'name' => 'Rzecz',
                 'description' => 'lorem ipsum',
                 'slug' => 'rzecz-'.$i,
-                'image_url' => 'http://lorempixel.com/200/200/',
                 'author_id' => 1
             ]);
         }

@@ -18,7 +18,6 @@ class CreateThingsTable extends Migration
             $table->string('name')->default('');
             $table->text('description');
             $table->string('slug');
-            $table->string('image_url');
             $table->integer('author_id');
             $table->timestamps();
         });
