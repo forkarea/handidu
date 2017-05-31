@@ -13,9 +13,11 @@
 
     <p style="margin: 20px 0px">{{ $thing->description }}</p>
 
-    <div style="margin: 20px 0px">
-        <img src="{{ $thing->mainphoto->filename }}" class="img-thumbnail">
-    </div>
+    @if($thing->mainphoto)
+        <div style="margin: 20px 0px">
+            <img src="{{ $thing->mainphoto->filename }}" class="img-thumbnail">
+        </div>
+    @endif
 
     <p>Kategorie:
         @foreach($thing->categories as $category)

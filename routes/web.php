@@ -53,4 +53,6 @@ Route::get('/add-thing', function () {
 
 Route::post('/comments', 'CommentController@store')->name('post_comment')->middleware('auth');
 
+Route::post('/things', 'ThingController@store')->name('post_thing')->middleware('auth');
+
 Auth::routes();

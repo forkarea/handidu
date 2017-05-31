@@ -3,7 +3,8 @@
 @section('content')
     <h2>Dodawanie dzieła</h2>
 
-    <form style="margin: 10px 0px">
+    <form style="margin: 10px 0px" method="POST" action="{{ route('post_thing') }}">
+        {{ csrf_field() }}
         <div class="form-group">
             <label for="nameInput">Nazwa</label>
             <input type="text" id="nameInput" name="name" class="form-control">
@@ -14,7 +15,7 @@
                 @foreach($categories as $category)
                 <div class="form-check">
                     <label class="form-check-label">
-                        <input type="checkbox" class="form-check-input" name="category[{{ $category->id }}]">
+                        <input type="checkbox" class="form-check-input" name="categories[]" value="{{ $category->id }}">
                         {{ $category->name }}
                     </label>
                 </div>

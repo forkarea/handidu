@@ -18,7 +18,7 @@ class CommentController extends Controller
             $comment->commentable_id = $request->thing_id;
         }
         $comment->save();
-        session()->flash('messages', ['success' => ['Komentarz zapisany.']]);
+        session()->flash('messages', ['success' => ['Komentarz zapisany.']]); //przerzucić to do jakiejś funkcji
         return redirect(Thing::where(['id' => $request->thing_id])->first()->link);
     }
 }
