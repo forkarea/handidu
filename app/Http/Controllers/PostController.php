@@ -13,6 +13,7 @@ class PostController extends Controller
         $post->text = $request->text;
         $post->author_id = Auth::id();
         $post->save();
+        session()->flash('messages', ['success' => ['Dodano wpis']]);
         return redirect('posts');
     }
 }
