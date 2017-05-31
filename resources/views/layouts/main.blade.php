@@ -104,6 +104,18 @@
             
             <div class="row">
                 <div class="col-sm-9 col-xs-12">
+                    @if(session()->has('messages.success'))
+                        @foreach(session('messages.success') as $message)
+                            <div class="alert alert-success" role="alert">{{ $message }}</div>
+                        @endforeach
+                    @endif
+                    
+                    @if(session()->has('messages.error'))
+                        @foreach(session('messages.error') as $message)
+                            <div class="alert alert-danger" role="alert">{{ $message }}</div>
+                        @endforeach
+                    @endif
+                    
                     @section('content')
 
                     @show

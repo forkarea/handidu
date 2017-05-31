@@ -13,10 +13,12 @@ class CommentController extends Controller
         $comment = new Comment();
         $comment->text = $request->text;
         $comment->author_id = Auth::id();
-        if($request->for == 'thing')
+        if($request->for == 'thing') {
             $comment->commentable_type = Thing::class;
-        $comment->commentable_id = $request->thing_id;
+            $comment->commentable_id = $request->thing_id;
+        }
         $comment->save();
+        session()->flash('messages', ['success' => ['Komentarz zapisany.']]);
         return redirect(Thing::where(['id' => $request->thing_id])->first()->link);
     }
 }
