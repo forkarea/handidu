@@ -38,7 +38,7 @@
 
     <p>Kategorie:
         @foreach($thing->categories as $category)
-        <a href="{{ route('category', $category->slug) }}">{{ $category->name }}</a>
+        <a href="{{ route('category', $category->slug) }}">{{ $category->translation }}</a>
             @if(!$loop->last)
             , 
             @endif

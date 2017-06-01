@@ -12,4 +12,8 @@ class Category extends Model
     {
         return $this->belongsToMany('App\Thing');
     }
+    
+    public function getTranslationAttribute() {
+        return __('categories.'.$this->name);
+    }
 }

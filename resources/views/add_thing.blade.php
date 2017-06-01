@@ -16,7 +16,7 @@
                 <div class="form-check">
                     <label class="form-check-label">
                         <input type="checkbox" class="form-check-input" name="categories[]" value="{{ $category->id }}">
-                        {{ $category->name }}
+                        {{ $category->translation }}
                     </label>
                 </div>
                 @endforeach
