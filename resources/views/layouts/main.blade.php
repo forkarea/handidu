@@ -126,7 +126,7 @@
                 <div class="col-sm-3 col-xs-12">
                     <div class="list-group">
                         @foreach($categories as $category)
-                            <a href="{{ route('category', $category->slug) }}" class="list-group-item">{{ $category->name }}</a>
+                            <a href="{{ route('category', $category->slug) }}" class="list-group-item">{{ __('categories.'.$category->name) }}</a>
                         @endforeach
                     </div>
                     
