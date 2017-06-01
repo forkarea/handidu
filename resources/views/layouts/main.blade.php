@@ -74,17 +74,17 @@
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
-                        <li><a href="{{ route('add-thing') }}">Dodaj dzieło</a></li>
-                        <li><a href="{{ route('posts') }}">Posty</a></li>
+                        <li><a href="{{ route('add-thing') }}">{{ __('interface.Add creation') }}</a></li>
+                        <li><a href="{{ route('posts') }}">{{ __('interface.Posts') }}</a></li>
                     </ul>
                     
                     @if(Auth::check())
                     <p class="navbar-text navbar-right">
-                        Signed in as <a href="{{ route('user', Auth::user()->username) }}">{{ Auth::user()->fullname }}</a> | 
+                        {{ __('interface.Signed in as') }} <a href="{{ route('user', Auth::user()->username) }}">{{ Auth::user()->fullname }}</a> | 
                         <a href="{{ route('logout') }}"
                             onclick="event.preventDefault();
                                      document.getElementById('logout-form').submit();">
-                            Logout
+                            {{ __('interface.Logout') }}
                         </a>
 
                         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
@@ -93,7 +93,7 @@
                     </p>
                     @else
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="/login">Zaloguj</a></li>
+                        <li><a href="/login">{{ __('interface.Sign in') }}</a></li>
                     </ul>
                     @endif
 
