@@ -1,4 +1,4 @@
-#Do zrobienia
+# Do zrobienia
 
 - walidacja dodawania dzieła
 - ładowanie zdjęć w dziele
