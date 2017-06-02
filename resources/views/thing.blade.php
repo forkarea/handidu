@@ -3,7 +3,7 @@
 @section('content')
     <h2>{{ $thing->name }}</h2>
     <p style="margin-top: 15px">
-        Autor: 
+        {{ __('interface.Author') }}: 
         <a href="{{ $thing->author->link }}" class="user-label" style="margin: 0px 6px">
             <img style="margin-right: 4px" src="{{ $thing->author->avatar }}" class="img-circle" /> 
             <span>{{ $thing->author->fullname }}</span>
@@ -36,7 +36,7 @@
         </div>
     @endif
 
-    <p>Kategorie:
+    <p>{{ __('interface.Categories') }}:
         @foreach($thing->categories as $category)
         <a href="{{ route('category', $category->slug) }}">{{ $category->translation }}</a>
             @if(!$loop->last)
@@ -45,7 +45,7 @@
         @endforeach
     </p>
     
-    <h3>Komentarze</h3>
+    <h3>{{ __('interface.Comments') }}</h3>
 
     <div style="margin: 20px 0px">
         @foreach($thing->comments as $comment)
@@ -68,10 +68,10 @@
             <div class="form-group">
                 <textarea class="form-control" name="text" rows="3"></textarea>
             </div>
-            <button type="submit" class="btn btn-primary">Dodaj komentarz</button>
+            <button type="submit" class="btn btn-primary">{{ __('interface.Add comment') }}</button>
         </form>
         @else
-        <p><a href="{{ route('login') }}">Zaloguj się</a>, aby dodać komentarz</p>
+        <p><a href="{{ route('login') }}">{{ __('interface.Sign in2') }}</a>, {{ __('interface.to add comment') }}</p>
         @endif
     </div>
 

@@ -7,7 +7,7 @@
         <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
         <link href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.1.1/ekko-lightbox.css" rel="stylesheet">
 
-        <title>Handidu - portal społecznościowy dla rękodzielników</title>
+        <title>{{ __('config.pageTitle') }}</title>
 
         <style>
         @import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);

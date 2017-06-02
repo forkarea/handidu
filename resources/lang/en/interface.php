@@ -6,6 +6,17 @@ return [
     'Signed in as' => 'Signed in as',
     'Logout' => 'Logout',
     'Sign in' => 'Sign in',
-    'addedWhenBy' => 'Added :date by'
+    'Sign in2' => 'Sign in',
+    'addedWhenBy' => 'Added :date by',
+    'Adding thing' => 'Adding thing',
+    'Categories' => 'Categories',
+    'Description' => 'Description',
+    'Photo' => 'Photo',
+    'Add' => 'Add',
+    'Add post' => 'Add post',
+    'Author' => 'Author',
+    'Comments' => 'Comments',
+    'Add comment' => 'Add comment',
+    'to add comment' => 'to add comment'
     
 ];

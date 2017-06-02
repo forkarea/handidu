@@ -2,7 +2,7 @@
 
 @section('content')
 
-    <h2>Posty</h2>
+    <h2>{{ __('interface.Posts') }}</h2>
 
     @if (Auth::check())
         <form method="POST" action="{{ route('posts') }}">
@@ -10,7 +10,7 @@
             <div class="form-group">
                 <textarea class="form-control" name="text" rows="3"></textarea>
             </div>
-            <button type="submit" class="btn btn-primary">Dodaj wpis</button>
+            <button type="submit" class="btn btn-primary">{{ __('interface.Add post') }}</button>
         </form>
     @endif
 
