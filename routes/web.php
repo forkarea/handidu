@@ -30,6 +30,10 @@ Route::get('/gallery/{user}/{slug}', function ($user, $slug) {
     return view('thing', ['thing' => $thing]);
 })->name('thing');
 
+Route::get('/gallery/{user}', function ($user) {
+    return redirect(route('user', ['username' => $user]));
+});
+
 Route::get('/category/{slug}', function ($slug) {
     $category = Category::where('slug',$slug)->first();
     return view('category', ['category' => $category]);
