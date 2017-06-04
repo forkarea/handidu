@@ -25,8 +25,9 @@ class ThingController extends Controller
         
         $thing->save();
         
-        $filePath = $request->photo->store('photos');
+        $filePath = $request->photo->store('public/photos');
         $photo = new \App\Photo;
+        $filePath = substr($filePath, 7); //usuwanie 'public/' z linku - nie wiem narazie jak to inaczej zrobić
         $photo->filename = $filePath;
         $photo->photoholdable_type = 'App\Thing';
         $photo->photoholdable_id = $thing->id;
