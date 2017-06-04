@@ -2,9 +2,21 @@
 
 @section('content')
     <h2>{{ $category->translation }}</h2>
-    <ul>
-        @foreach($category->things as $thing)
-            <li><a href="{{ $thing->link }}">{{ $thing->slug }}</a></li>
-        @endforeach
-    </ul>
+    @foreach($category->things->chunk(4) as $chunk)
+
+        <div class="row">
+
+            @foreach($chunk as $thing) 
+
+            <div class="col-md-3 col-xs-6">
+                <a href="{{ $thing->link }}" class="thumbnail">
+                    <img src="{{ $thing->mainphoto->filename }}">
+                </a>
+            </div>
+
+            @endforeach
+
+        </div>
+
+    @endforeach
 @endsection
