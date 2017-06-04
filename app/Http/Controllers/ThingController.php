@@ -24,6 +24,14 @@ class ThingController extends Controller
         $thing->categories()->attach($request->categories);
         
         $thing->save();
+        
+        $filePath = $request->photo->store('photos');
+        $photo = new \App\Photo;
+        $photo->filename = $filePath;
+        $photo->photoholdable_type = 'App\Thing';
+        $photo->photoholdable_id = $thing->id;
+        $photo->save();
+        
         session()->flash('messages', ['success' => ['Zapisano']]);
         return redirect($thing->link);
         
