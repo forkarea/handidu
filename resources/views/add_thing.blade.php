@@ -3,7 +3,7 @@
 @section('content')
     <h2>{{ __('interface.Adding thing') }}</h2>
 
-    <form style="margin: 10px 0px" method="POST" action="{{ route('post_thing') }}">
+    <form style="margin: 10px 0px" method="POST" action="{{ route('post_thing') }}" enctype="multipart/form-data">
         {{ csrf_field() }}
         <div class="form-group">
             <label for="nameInput">Nazwa</label>
