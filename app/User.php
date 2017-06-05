@@ -31,6 +31,10 @@ class User extends Authenticatable
         return $this->hasMany('App\Thing', 'author_id');
     }
     
+    public function posts() {
+        return $this->hasMany('App\Post', 'author_id');
+    }
+    
     public function getFullnameAttribute() {
         return $this->first_name.' '.$this->last_name;
     }
