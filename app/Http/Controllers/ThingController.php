@@ -10,6 +10,11 @@ class ThingController extends Controller
 {
     public function store(Request $request) {
         
+        $this->validate($request, [
+            'name' => 'required',
+            'photo' => 'required|image'
+        ]);
+        
         $thing = new Thing;
         $thing->name = $request->name;
         $thing->description = $request->description;

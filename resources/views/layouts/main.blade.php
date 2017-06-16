@@ -111,8 +111,8 @@
                         @endforeach
                     @endif
                     
-                    @if(session()->has('messages.error'))
-                        @foreach(session('messages.error') as $message)
+                    @if (count($errors) > 0)
+                        @foreach($errors->all() as $message)
                             <div class="alert alert-danger" role="alert">{{ $message }}</div>
                         @endforeach
                     @endif
