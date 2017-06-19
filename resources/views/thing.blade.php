@@ -66,7 +66,7 @@
             <input type="hidden" name="thing_id" value="{{ $thing->id }}">
             <input type="hidden" name="for" value="thing">
             <div class="form-group">
-                <textarea class="form-control" name="text" rows="3"></textarea>
+                <textarea class="form-control" name="text" rows="3" required></textarea>
             </div>
             <button type="submit" class="btn btn-primary">{{ __('interface.Add comment') }}</button>
         </form>

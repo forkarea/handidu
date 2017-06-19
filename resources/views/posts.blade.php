@@ -8,7 +8,7 @@
         <form method="POST" action="{{ route('posts') }}">
             {{ csrf_field() }}
             <div class="form-group">
-                <textarea class="form-control" name="text" rows="3"></textarea>
+                <textarea class="form-control" name="text" rows="3" required></textarea>
             </div>
             <button type="submit" class="btn btn-primary">{{ __('interface.Add post') }}</button>
         </form>
