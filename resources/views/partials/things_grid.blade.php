@@ -5,7 +5,7 @@
         @foreach($chunk as $thing) 
 
         <div class="col-md-3 col-xs-6">
-            <a href="{{ $thing->link }}" class="thumbnail" style="width: 200px; height: 200px">
+            <a href="{{ $thing->link }}" class="thumbnail" style="max-width: 200px; max-height: 200px">
                 <img src="{{ $thing->mainphoto->link }}">
             </a>
         </div>
