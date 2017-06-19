@@ -20,7 +20,7 @@ class CreateUsersTable extends Migration
             $table->string('last_name');
             $table->string('email')->unique();
             $table->string('password');
-            $table->string('lang');
+            $table->string('lang')->default(config('app.locale'));
             $table->rememberToken();
             $table->timestamps();
         });
