@@ -26,6 +26,8 @@ return [
     */
 
     'env' => env('APP_ENV', 'production'),
+    
+    'forceHttps' => env('APP_ENV', 'production') == 'production' ? true : false,
 
     /*
     |--------------------------------------------------------------------------

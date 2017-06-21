@@ -16,6 +16,7 @@ class AppServiceProvider extends ServiceProvider
     {
         Schema::defaultStringLength(191);
         view()->share('categories', \App\Category::all());
+        $this->app['request']->server->set('HTTPS', config('app.forceHttps'));
     }
 
     /**
