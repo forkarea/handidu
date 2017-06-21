@@ -17,5 +17,7 @@ return [
     'Author' => 'Autor',
     'Comments' => 'Komentarze',
     'Add comment' => 'Dodaj komentarz',
-    'to add comment' => 'aby dodać komentarz'
+    'to add comment' => 'aby dodać komentarz',
+    'Edit' => 'Edytuj',
+    'Delete' => 'Usuń',
 ];

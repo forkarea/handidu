@@ -2,6 +2,20 @@
 
 @section('content')
     <h2>{{ $thing->name }}</h2>
+    
+    @if(Auth::check() && (Auth::user()->can('update', $thing) || Auth::user()->can('delete', $thing)))
+        <p style="margin-top: 15px">
+        @can('update', $thing)
+            <a href="{{ $thing->editPageLink }}"><i class="glyphicon glyphicon-pencil"></i> {{ __('interface.Edit') }}</a>
+            | 
+        @endcan
+        
+        @can('delete', $thing)
+            <a href="#"><i class=" glyphicon glyphicon-trash"></i> {{ __('interface.Delete') }}</a>
+        @endcan
+        </p>
+    @endif
+
     <p style="margin-top: 15px">
         {{ __('interface.Author') }}: 
         <a href="{{ $thing->author->link }}" class="user-label" style="margin: 0px 6px">
@@ -10,7 +24,7 @@
         </a>
         ({{ $thing->created_at }})
     </p>
-
+    
     <p style="margin: 20px 0px">{{ $thing->description }}</p>
 
     @if($thing->photos)
