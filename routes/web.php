@@ -28,7 +28,7 @@ Route::get('/', function () {
 Route::get('/gallery/{user}/{slug}/edit', function ($user, $slug) {
     $thing = Thing::where('slug',$slug)->first();
     return view('thing_edit', ['thing' => $thing]);
-})->name('thing_edit_page');
+})->name('thing_edit_page')->middleware('auth');
 
 Route::get('/gallery/{user}/{slug}', function ($user, $slug) {
     $thing = Thing::where('slug',$slug)->first();
