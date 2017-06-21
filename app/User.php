@@ -40,7 +40,7 @@ class User extends Authenticatable
     }
     
     public function getAvatarAttribute() {
-        return 'http://i.pravatar.cc/35?img=68'; //tu ma być rzeczywista ścieżka do pliku
+        return 'https://api.adorable.io/avatars/35/abott@adorable.io.png'; //tu ma być rzeczywista ścieżka do pliku
     }
     
     public function getLinkAttribute() {
