@@ -8,7 +8,7 @@
         
         <div class="form-group">
             <label for="nameInput">{{ __('interface.Name') }}</label>
-            <input type="text" id="nameInput" name="name" value="{{ $thing->name }}" class="form-control">
+            <input type="text" id="nameInput" name="name" value="{{ $thing->name }}" class="form-control" required>
         </div>
         
         <fieldset class="form-group">

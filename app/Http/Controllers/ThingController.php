@@ -50,6 +50,10 @@ class ThingController extends Controller
         
         $this->authorize('update', $thing);
         
+        $this->validate($request, [
+            'name' => 'required'
+        ]);
+        
         $thing->name = $request->name;
         $thing->description = $request->description;
         $thing->categories()->detach();
