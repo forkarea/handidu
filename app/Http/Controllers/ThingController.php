@@ -44,8 +44,11 @@ class ThingController extends Controller
     }
     
     public function update(Request $request) {
+        
         if(!$thing = Thing::find($request->id))
             abort(404);
+        
+        $this->authorize('update', $thing);
         
         $thing->name = $request->name;
         $thing->description = $request->description;
