@@ -155,12 +155,14 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.1.1/ekko-lightbox.js"></script>
     
     <script>
+    @section('scripts')
     $(document).on('click', '[data-toggle="lightbox"]', function(event) {
         event.preventDefault();
         $(this).ekkoLightbox({
             alwaysShowClose: true,
         });
     });    
+    @show
     </script>
-
+    
 </html>

@@ -59,4 +59,16 @@ class ThingController extends Controller
         session()->flash('messages', ['success' => [__('interface.Changes saved')]]);
         return redirect($thing->link);
     }
+    
+    public function delete(Request $request) {
+        
+        if(!$thing = Thing::find($request->id))
+            abort(404);
+        
+        $this->authorize('delete', $thing);
+        
+        $thing->delete();
+        session()->flash('messages', ['success' => [__('interface.Deleted')]]);
+        return redirect(auth()->user()->link);
+    }
 }

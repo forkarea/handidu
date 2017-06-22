@@ -24,6 +24,9 @@ return [
     'Save changes' => 'Save changes',
     'Edit thing' => 'Edit thing',
     'Changes saved' => 'Changes saved',
-    'Saved' => 'Saved'
-    
+    'Saved' => 'Saved',
+    'Ask for confirmation' => 'Ask for confirmation',
+    'Cancel' => 'Cancel',
+    'Are you sure you want to delete this element?' => 'Are you sure you want to delete this element?',
+    'Deleted' => 'Deleted'
 ];

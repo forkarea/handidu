@@ -71,4 +71,6 @@ Route::post('/things', 'ThingController@store')->name('post_thing')->middleware(
 
 Route::post('/thing/{id}', 'ThingController@update')->name('update_thing')->middleware('auth');
 
+Route::delete('/thing/{id}', 'ThingController@delete')->name('delete_thing')->middleware('auth');
+
 Auth::routes();

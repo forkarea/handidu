@@ -11,7 +11,7 @@
         @endcan
         
         @can('delete', $thing)
-            <a href="#"><i class=" glyphicon glyphicon-trash"></i> {{ __('interface.Delete') }}</a>
+            <a href="#" data-toggle="modal" data-target="#deleteThingConfirmationModal"><i class=" glyphicon glyphicon-trash"></i> {{ __('interface.Delete') }}</a>
         @endcan
         </p>
     @endif
@@ -89,4 +89,37 @@
         @endif
     </div>
 
+@endsection
+
+
+<div id="deleteThingConfirmationModal" class="modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">{{ __('interface.Ask for confirmation') }}</h4>
+            </div>
+            
+            <div class="modal-body">
+              <p>{{ __('interface.Are you sure you want to delete this element?') }}</p>
+            </div>
+            
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">{{ __('interface.Cancel') }}</button>
+                <form style="display: inline" method="POST" action="{{ route('delete_thing', ['id' => $thing->id]) }}">
+                    {{ csrf_field() }}
+                    <input type="hidden" name="_method" value="DELETE">
+                    <button id="deleteThingConfirmationButton" type="button" role="submit" class="btn btn-danger">{{ __('interface.Delete') }}</button>
+                    
+                </form>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+@section('scripts')
+    @parent
+    $('#deleteThingConfirmationButton').click(function() {
+       $(this).parents('form').submit(); 
+    });
 @endsection
