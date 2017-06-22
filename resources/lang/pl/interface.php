@@ -20,5 +20,8 @@ return [
     'to add comment' => 'aby dodać komentarz',
     'Edit' => 'Edytuj',
     'Delete' => 'Usuń',
-    'Name' => 'Nazwa'
+    'Name' => 'Nazwa',
+    'Save changes' => 'Zapisz zmiany',
+    'Edit thing' => 'Edycja dzieła',
+    'Changes saved' => 'Zapisano zmiany'
 ];

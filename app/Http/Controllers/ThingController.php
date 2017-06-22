@@ -42,4 +42,18 @@ class ThingController extends Controller
         return redirect($thing->link);
         
     }
+    
+    public function update(Request $request) {
+        if(!$thing = Thing::find($request->id))
+            abort(404);
+        
+        $thing->name = $request->name;
+        $thing->description = $request->description;
+        $thing->categories()->detach();
+        $thing->categories()->attach($request->categories);
+        
+        $thing->save();
+        session()->flash('messages', ['success' => [__('interface.Changes saved')]]);
+        return redirect($thing->link);
+    }
 }

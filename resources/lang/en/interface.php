@@ -20,6 +20,9 @@ return [
     'to add comment' => 'to add comment',
     'Edit' => 'Edit',
     'Delete' => 'Delete',
-    'Name' => 'Name'
+    'Name' => 'Name',
+    'Save changes' => 'Save changes',
+    'Edit thing' => 'Edit thing',
+    'Changes saved' => 'Changes saved'
     
 ];

@@ -69,4 +69,6 @@ Route::post('/comments', 'CommentController@store')->name('post_comment')->middl
 
 Route::post('/things', 'ThingController@store')->name('post_thing')->middleware('auth');
 
+Route::post('/thing/{id}', 'ThingController@update')->name('update_thing')->middleware('auth');
+
 Auth::routes();
