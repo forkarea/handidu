@@ -25,7 +25,7 @@ Route::get('/', function () {
     ]);
 });
 
-Route::get('/gallery/{user}/{slug}/edit', function ($user, $slug) {
+Route::get('/gallery/{user}/{slug}/edit', function ($username, $slug) {
     if((!$user = User::where('username', $username)->first()) || (!$thing = Thing::where(['slug' => $slug])->first()))
         abort(404);
     return view('thing_edit', ['thing' => $thing]);
