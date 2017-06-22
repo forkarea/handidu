@@ -38,7 +38,7 @@ class ThingController extends Controller
         $photo->photoholdable_id = $thing->id;
         $photo->save();
         
-        session()->flash('messages', ['success' => ['Zapisano']]);
+        session()->flash('messages', ['success' => [__('interface.Saved')]]);
         return redirect($thing->link);
         
     }

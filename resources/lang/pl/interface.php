@@ -23,5 +23,6 @@ return [
     'Name' => 'Nazwa',
     'Save changes' => 'Zapisz zmiany',
     'Edit thing' => 'Edycja dzieła',
-    'Changes saved' => 'Zapisano zmiany'
+    'Changes saved' => 'Zapisano zmiany',
+    'Saved' => 'Zapisano'
 ];

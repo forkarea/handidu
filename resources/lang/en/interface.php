@@ -23,6 +23,7 @@ return [
     'Name' => 'Name',
     'Save changes' => 'Save changes',
     'Edit thing' => 'Edit thing',
-    'Changes saved' => 'Changes saved'
+    'Changes saved' => 'Changes saved',
+    'Saved' => 'Saved'
     
 ];
