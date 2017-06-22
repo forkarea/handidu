@@ -46,6 +46,9 @@ class Handler extends ExceptionHandler
     {
         if($exception instanceof \Symfony\Component\HttpKernel\Exception\NotFoundHttpException)
             return response()->view('errors.404',[],404);
+        
+        if($exception instanceof \Illuminate\Foundation\Testing\HttpException)
+            return response()->view('errors.403',[],403);
             
         return parent::render($request, $exception);
     }
