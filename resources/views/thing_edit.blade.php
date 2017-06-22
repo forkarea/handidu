@@ -33,5 +33,6 @@
         </div>
         
         <button type="submit" class="btn btn-primary">{{ __('interface.Save changes') }}</button>
+        <a href="{{ $thing->link }}" class="btn btn-default">{{ __('interface.Cancel') }}</button>
     </form>
 @endsection
