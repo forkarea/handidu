@@ -26,12 +26,15 @@ Route::get('/', function () {
 });
 
 Route::get('/gallery/{user}/{slug}/edit', function ($user, $slug) {
-    $thing = Thing::where('slug',$slug)->first();
+    if((!$user = User::where('username', $username)->first()) || (!$thing = Thing::where(['slug' => $slug])->first()))
+        abort(404);
     return view('thing_edit', ['thing' => $thing]);
 })->name('thing_edit_page')->middleware('auth');
 
-Route::get('/gallery/{user}/{slug}', function ($user, $slug) {
-    $thing = Thing::where('slug',$slug)->first();
+Route::get('/gallery/{user}/{slug}', function ($username, $slug) {
+    if((!$user = User::where('username', $username)->first()) || (!$thing = Thing::where(['slug' => $slug])->first()))
+        abort(404);
+    
     return view('thing', ['thing' => $thing]);
 })->name('thing');
 
@@ -40,7 +43,8 @@ Route::get('/gallery/{user}', function ($user) {
 });
 
 Route::get('/category/{slug}', function ($slug) {
-    $category = Category::where('slug',$slug)->first();
+    if(!$category = Category::where('slug',$slug)->first())
+        abort(404);
     return view('category', ['category' => $category]);
 })->name('category');
 
@@ -52,7 +56,8 @@ Route::get('/posts', function () {
 Route::post('/posts', 'PostController@store')->middleware('auth');
 
 Route::get('/profile/{username}', function ($username) {
-    $user = User::where(['username' => $username])->first();
+    if(!$user = User::where(['username' => $username])->first())
+        abort(404);
     return view('profile', ['user' => $user]);
 })->name('user');
 
