@@ -20,4 +20,5 @@ return [
     'to add comment' => 'aby dodać komentarz',
     'Edit' => 'Edytuj',
     'Delete' => 'Usuń',
+    'Name' => 'Nazwa'
 ];
