@@ -66,7 +66,7 @@
         </style>
     </head>
     <body>
-        <nav class="navbar handidu-navbar">
+        <nav class="navbar handidu-navbar navbar-fixed-top" style="padding-right: 10px">
             <div class="container-fluid">
                 <!-- Brand and toggle get grouped for better mobile display -->
                 <div class="navbar-header">
@@ -109,7 +109,7 @@
             </div><!-- /.container-fluid -->
         </nav>
         
-        <div class="container">
+        <div class="container" style="margin-top: 70px">
             
             <div class="row">
                 <div class="col-sm-9 col-xs-12">
