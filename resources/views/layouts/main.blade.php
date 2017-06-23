@@ -52,6 +52,14 @@
             background-color: #5BB5AA;
         }
         
+        .navbar-toggle {
+            border: 1px solid #ddd;
+        }
+        
+        .navbar-toggle .icon-bar {
+            background-color: #ddd;
+        }
+        
         a:hover, a:active, a:focus {
             text-decoration: none;
         }
