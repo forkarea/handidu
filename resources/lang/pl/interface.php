@@ -28,5 +28,6 @@ return [
     'Ask for confirmation' => 'Prośba o potwierdzenie',
     'Cancel' => 'Anuluj',
     'Are you sure you want to delete this element?' => 'Czy na pewno chcesz usunąć ten element?',
-    'Deleted' => 'Usunięto'
+    'Deleted' => 'Usunięto',
+    'Settings' => 'Ustawienia'
 ];

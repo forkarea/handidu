@@ -87,22 +87,26 @@
                     </ul>
                     
                     @if(Auth::check())
-                    <p class="navbar-text navbar-right">
-                        {{ __('interface.Signed in as') }} <a href="{{ route('user', Auth::user()->username) }}">{{ Auth::user()->fullname }}</a> | 
-                        <a href="{{ route('logout') }}"
-                            onclick="event.preventDefault();
-                                     document.getElementById('logout-form').submit();">
-                            {{ __('interface.Logout') }}
-                        </a>
-
-                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                            {{ csrf_field() }}
-                        </form>
-                    </p>
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="{{ Auth::user()->link }}">{{ Auth::user()->fullname }}</a></li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="{{ route('settings') }}">{{ __('interface.Settings') }}</a></li>
+                                    <li role="separator" class="divider"></li>
+                                    <li>
+                                        <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">{{ __('interface.Logout') }}</a>
+                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                            {{ csrf_field() }}
+                                        </form>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
                     @else
-                    <ul class="nav navbar-nav navbar-right">
-                        <li><a href="/login">{{ __('interface.Sign in') }}</a></li>
-                    </ul>
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="/login">{{ __('interface.Sign in') }}</a></li>
+                        </ul>
                     @endif
 
                 </div><!-- /.navbar-collapse -->

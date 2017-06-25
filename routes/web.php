@@ -65,6 +65,10 @@ Route::get('/add-thing', function () {
     return view('add_thing');
 })->name('add-thing')->middleware('auth');
 
+Route::get('/settings', function () {
+    return view('settings');
+})->name('settings')->middleware('auth');
+
 Route::post('/comments', 'CommentController@store')->name('post_comment')->middleware('auth');
 
 Route::post('/things', 'ThingController@store')->name('post_thing')->middleware('auth');
